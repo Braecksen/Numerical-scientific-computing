@@ -15,3 +15,5 @@ Returns
 float
 Output value
 """
+
+### TODO: Implement the algorithm
