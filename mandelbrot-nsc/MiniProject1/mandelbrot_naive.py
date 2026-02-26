@@ -1,5 +1,7 @@
 import time
 import matplotlib.pyplot as plt
+import statistics
+
 
 """
 Mandelbrot Set Generator
@@ -10,7 +12,7 @@ def mandelbrot_point(c, max_iter):
     z = 0
 
     for i in range(max_iter):
-        z = z**2+c
+        z = z = z*z + c
         if abs(z) > 2:
             return i
     return max_iter
@@ -44,13 +46,27 @@ def visualize_mandelbrot(grid, title="Mandelbrot Set", cmap="hot", filename="man
     plt.savefig(filename)
     plt.show()
 
+    
+
+def benchmark(func, *args, n_runs=3):
+    """Time func, return median runtime and result."""
+    times = []
+
+    for _ in range(n_runs):
+        t0 = time.perf_counter()
+        result = func(*args)
+        times.append(time.perf_counter() - t0)
+
+    median_t = statistics.median(times)
+    print(
+        f"Median: {median_t:.4f}s "
+        f"(min={min(times):.4f}, max={max(times):.4f})"
+    )
+
+    return median_t, result
 
 
 # Main execution
 if __name__ == "__main__":   
-    start = time.time()
-    compute_mandelbrot(100, 1024, 1024)
-    end = time.time()
-    print(f"Time taken to compute Mandelbrot set: {end - start:.2f} seconds")
-    visualize_mandelbrot(compute_mandelbrot(100,1024, 1024), title="Mandelbrot Set (1024x1024)", filename="mandelbrot_1024.png")
-    
+
+    t, M = benchmark(compute_mandelbrot,100, 1024, 1024, n_runs=3)
