@@ -18,7 +18,7 @@ def mandelbrot_point(c, max_iter):
     return max_iter
 
 
-def compute_mandelbrot(max_iter, width, height, x_min = -2, x_max = 1, y_min = -1.5, y_max = 1.5):
+def compute_mandelbrot_naive(max_iter, width, height, x_min = -2, x_max = 1, y_min = -1.5, y_max = 1.5):
 
     mandelbrot_set = [[0 for _ in range(width)] for _ in range(height)]
 
@@ -69,4 +69,4 @@ def benchmark(func, *args, n_runs=3):
 # Main execution
 if __name__ == "__main__":   
 
-    t, M = benchmark(compute_mandelbrot,100, 1024, 1024, n_runs=3)
+    t, M = benchmark(compute_mandelbrot_naive,100, 1024, 1024, n_runs=3)
