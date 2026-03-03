@@ -1,0 +1,110 @@
+2026-03-03 86f9041 added experiments for precision comparison
+
+ mandelbrot-nsc/MiniProject1/Lecture3_numba.ipynb   | 119 ++++++++++++++++++++-
+ .../MiniProject1/precision_comparison.png          | Bin 0 -> 75815 bytes
+ 2 files changed, 117 insertions(+), 2 deletions(-)
+2026-03-03 74b5bc8 implemented numba and hybrid mandelbrot approaches
+
+ mandelbrot-nsc/MiniProject1/Lecture3_numba.ipynb   | 146 +++++++++++++++++++++
+ .../__pycache__/mandelbrot_numba.cpython-311.pyc   | Bin 0 -> 1841 bytes
+ 2 files changed, 146 insertions(+)
+2026-03-03 16b1430 questions for milestone 2 answered
+
+ mandelbrot-nsc/MiniProject1/Lecture3_numba.ipynb | 39 ++++++++++++++++++++++++
+ 1 file changed, 39 insertions(+)
+2026-03-03 6a8a5ff implemented line profiling ( milestone 2)
+
+ mandelbrot-nsc/MiniProject1/Lecture3_numba.ipynb | 66 ++++++++++++++++++++++++
+ 1 file changed, 66 insertions(+)
+2026-03-03 92a805f Implemeted cProfiling on both naive and numpy mandelbrot to compare
+
+ mandelbrot-nsc/MiniProject1/Lecture3_numba.ipynb | 132 +++++++++++++++++++++++
+ mandelbrot-nsc/MiniProject1/Lecture3_numba.py    |   0
+ mandelbrot-nsc/MiniProject1/naive_profile.prof   | Bin 0 -> 841 bytes
+ mandelbrot-nsc/MiniProject1/numpy_profile.prof   | Bin 0 -> 5785 bytes
+ 4 files changed, 132 insertions(+)
+2026-03-03 1e77f0a created lecture 3 jupyter notebook
+
+ mandelbrot-nsc/MiniProject1/Lecture3_numba.py | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+2026-03-03 7911e42 removed the "memoryaccess.py file as it is doen in jupyternotebook for lecture 2
+
+ mandelbrot-nsc/MiniProject1/MemoryAccess.py        |  61 ---------------------
+ .../__pycache__/mandelbrot_naive.cpython-311.pyc   | Bin 3750 -> 0 bytes
+ .../__pycache__/mandelbrot_numpy.cpython-311.pyc   | Bin 2811 -> 0 bytes
+ 3 files changed, 61 deletions(-)
+2026-03-03 413e5cb made milestone 4 in the notebook for lecture 2
+
+ mandelbrot-nsc/MiniProject1/Lecture2_numPy.ipynb   | 103 +++++++++++++++++++++
+ .../__pycache__/mandelbrot_numpy.cpython-311.pyc   | Bin 0 -> 2811 bytes
+ 2 files changed, 103 insertions(+)
+2026-03-03 a999925 Created jupyternotebook for Mini project report structure of assignments, moved all code here to compute within report
+
+ mandelbrot-nsc/MiniProject1/Lecture2_numPy.ipynb | 303 +++++++++++++++++++++++
+ 1 file changed, 303 insertions(+)
+2026-03-03 faf0f0b Made a jupyter notebook for code execution of the naive implementation, so that it has "mini report" structure
+
+ mandelbrot-nsc/MiniProject1/Lecture1.ipynb         |  57 ----------
+ mandelbrot-nsc/MiniProject1/Lecture1_naive.ipynb   | 118 +++++++++++++++++++++
+ .../__pycache__/mandelbrot_naive.cpython-311.pyc   | Bin 0 -> 3750 bytes
+ 3 files changed, 118 insertions(+), 57 deletions(-)
+2026-03-03 d0213a8 updated function naming to reflect version
+
+ mandelbrot-nsc/MiniProject1/mandelbrot_naive.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+2026-03-02 6947640 Added file memoryaccess.py which is an experiment of memory access patters in python. It times row aswell as column wise traversal of arrays and times them
+
+ mandelbrot-nsc/MiniProject1/MemoryAccess.py | 61 +++++++++++++++++++++++++++++
+ 1 file changed, 61 insertions(+)
+2026-03-01 7422482 Removed loop 1 & 2 from naive implementation to keep only loop 3 in numpy version, ran the benchmarking and visualized result for verfication
+
+ mandelbrot-nsc/MiniProject1/mandelbrot_numpy.py | 47 +++++++++++++++++++++----
+ 1 file changed, 40 insertions(+), 7 deletions(-)
+2026-03-01 b2f05e8 Created the complex grid C for the Mandelbrot set and verified dtype & shape
+
+ mandelbrot-nsc/MiniProject1/mandelbrot_numpy.py | 60 ++++---------------------
+ 1 file changed, 8 insertions(+), 52 deletions(-)
+2026-03-01 b900044 Created new .py file for mandelbrot numpy implementation and copy pasted naive version here for skeleton
+
+ mandelbrot-nsc/MiniProject1/mandelbrot_numpy.py | 72 +++++++++++++++++++++++++
+ 1 file changed, 72 insertions(+)
+2026-02-26 c1cba6b Changed naming of file, added the benchmarking timing function from lecture slides
+
+ .../{mandelbrot.py => mandelbrot_naive.py}         |  30 ++++++++++++++++-----
+ mandelbrot_1024.png                                | Bin 84206 -> 0 bytes
+ 2 files changed, 23 insertions(+), 7 deletions(-)
+2026-02-19 02ba34e Removed tests
+
+ mandelbrot-nsc/MiniProject1/mandelbrot.py | 21 ++-------------------
+ 1 file changed, 2 insertions(+), 19 deletions(-)
+2026-02-19 376b946 Added timing in the main loop, plus added visualization
+
+ mandelbrot-nsc/MiniProject1/mandelbrot.py |  32 ++++++++++++++++++++++++++----
+ mandelbrot_1024.png                       | Bin 0 -> 84206 bytes
+ 2 files changed, 28 insertions(+), 4 deletions(-)
+2026-02-19 dca49f4 Add compute_mandelbrot function returning 2D list of iteration counts with testing to prove functionality
+
+ mandelbrot-nsc/MiniProject1/mandelbrot.py | 27 ++++++++++++++++++++++++++-
+ 1 file changed, 26 insertions(+), 1 deletion(-)
+2026-02-19 5cfd57a Implemented the function mandelbrot_point and created a test to check correct funtionality
+
+ .vscode/settings.json                     |  5 +++++
+ mandelbrot-nsc/MiniProject1/mandelbrot.py | 33 ++++++++++++++++++-------------
+ 2 files changed, 24 insertions(+), 14 deletions(-)
+2026-02-05 90bf53a added to do comment
+
+ mandelbrot-nsc/MiniProject1/mandelbrot.py | 2 ++
+ 1 file changed, 2 insertions(+)
+2026-02-05 9b2dbd6 added mandelbrot skeleton
+
+ mandelbrot-nsc/MiniProject1/mandelbrot.py | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+2026-02-05 1d303cd Added folders for each miniproject, added python environment specfication
+
+ .../MiniProject1/EnvironmentSetupTest.ipynb        |  82 +++++++++++++++
+ mandelbrot-nsc/MiniProject1/Lecture1.ipynb         |  57 ++++++++++
+ .../MiniProject1/MiniProject1_reflections.docx     | Bin 0 -> 13282 bytes
+ .../MiniProject2/MiniProject2_reflections.docx     | Bin 0 -> 13282 bytes
+ .../MiniProject3/MiniProject3_reflections.docx     | Bin 0 -> 13282 bytes
+ mandelbrot-nsc/environment.yml                     | 115 +++++++++++++++++++++
+ 6 files changed, 254 insertions(+)
